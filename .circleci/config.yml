@@ -12,6 +12,4 @@ jobs:
         name: expect
         command: sudo apt-get install expect
     - run: ./start.sh
-    - run:
-        name: update-npm
-        command: 'docker ps -a'
+    - run: yarn publish --new-version 0.0.0
