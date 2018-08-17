@@ -10,7 +10,7 @@ jobs:
     - setup_remote_docker
     - run:
         name: expect
-        command: apt-get install expect
+        command: sudo apt-get install expect
     - run:
         name: update-npm
         command: 'docker ps -a'
