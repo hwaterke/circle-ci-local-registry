@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+    - image: circleci/node:9
+    - image: verdaccio/verdaccio
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: expect
+        command: apt-get install expect
+    - run:
+        name: update-npm
+        command: 'docker ps -a'
